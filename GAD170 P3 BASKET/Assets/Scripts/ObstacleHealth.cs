@@ -11,7 +11,6 @@ public class ObstacleHealth : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        Debug.Log("here "+ damageAmount);
         this.health -= damageAmount;
         this.GetComponent<SpriteRenderer>().color = Color.red;
         Invoke("StopDamage", 0.2f);
