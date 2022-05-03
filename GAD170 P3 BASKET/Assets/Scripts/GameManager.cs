@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
     public Ball ball;
@@ -25,18 +27,23 @@ public class GameManager : MonoBehaviour
     {
         //_playerScore is the actual score for the player paddle, to show this in
         //the UI we need a playerScoreText variable to apply the new score value to
-        _playerScore++;
+        _playerScore += 3;
         this.score.text = _playerScore.ToString();
         Debug.Log("score");
     }
-    public void loseScore()
+    public void LoseScore()
     {
         //Player loses score when the miss the ball and it falls past them.
         _playerScore--;
         this.score.text = _playerScore.ToString();
         Debug.Log("ouch");
     }
-
+    public void RestartGame()
+    {
+      
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+      
+    }
 
     //destroy obstacle and replace wth the powerups
     //spawn in obstacles

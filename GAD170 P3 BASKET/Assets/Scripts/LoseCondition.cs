@@ -11,10 +11,12 @@ public class LoseCondition : MonoBehaviour
         //checks if the ball is present
         if (ball != null)
         {
-
-            BaseEventData eventData = new BaseEventData(EventSystem.current);
-            this.loseScore.Invoke(eventData);
-
+            Debug.Log("weee");
+            
         }
+       
+    
+        
     }
 }
+
