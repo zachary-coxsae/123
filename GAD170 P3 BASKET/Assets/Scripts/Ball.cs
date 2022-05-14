@@ -12,7 +12,6 @@ public class Ball : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
-    //sends the ball in a random direction when the game starts
     private void Start()
     {
         ResetPosition();
@@ -22,7 +21,6 @@ public class Ball : MonoBehaviour
     {
         _rigidbody.position = Vector3.zero;
         _rigidbody.velocity = Vector3.zero;
-        //AddStartingForce() we the removed it because we dont need the code to be going through more logic than it needs to be
     }
     //Making "force" possible to call in the "bouncy surface" script
     public void Bouncy(Vector2 force)
@@ -33,7 +31,7 @@ public class Ball : MonoBehaviour
     {
         ObstacleHealth health = collision.gameObject.GetComponent<ObstacleHealth>();
 
-        if (health != null)
+        if (health != null) //allows for obstacles to take damage
             health.TakeDamage(1);
     }
 }

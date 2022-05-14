@@ -17,12 +17,6 @@ public class GameManager : MonoBehaviour
     public Transform[] obstacleSpawnPoints;
     public object activeList;
     private float respawnTime;
-
-    /*private void Start()
-    {
-        ObstacleSpawn();
-    }*/
-   
     public void PlayerScores()
     {
         //_playerScore is the actual score for the player paddle, to show this in
@@ -40,32 +34,7 @@ public class GameManager : MonoBehaviour
     }
     public void RestartGame()
     {
-      
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
-      
+        // restarts game w/ the reset button
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
-
-    //destroy obstacle and replace wth the powerups
-    //spawn in obstacles
-    /*  private void ObstacleSpawn()
-      {
-          foreach( Transform sp in obstacleSpawnPoints)
-          {
-              if( sp == null ) { continue; }
-              int randomInt = Random.Range(0, obstacleLibrary.Length);
-              ObstacleHealth newObstacle = Instantiate(obstacleLibrary[randomInt]);
-              newObstacle.transform.position = sp.position;
-          }
-      }*/
-    /* private void ObstacleRespawn()
-     {
-         if (obstacleSpawnPoints == null)
-         {
-
-         }
-
-     }*/
-    //damage system 
-    //scoring linked to the hoops 
-
 }
