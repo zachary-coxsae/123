@@ -2860,7 +2860,10 @@ public class LeanTween : MonoBehaviour {
         }
     }
 
-
+    internal static void rotateX(Vector3 vector3)
+    {
+        throw new NotImplementedException();
+    }
 } // End LeanTween class
 
 public class LTUtility {
